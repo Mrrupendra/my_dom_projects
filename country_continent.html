@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Country Continent</title>
+        <style>
+            body{
+                margin: 0px;
+                height: 100vh;
+                background-color: black;
+            }
+            #parent {
+                width: 70%;
+                height: 100%;
+                margin: auto;
+                background-color: white;
+            }
+            #head_div {
+                font-size: 30px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: white;
+                margin: auto;
+                text-align: center;
+                font-weight: 900;
+                padding: 2%;
+                background-color: purple;    
+            }
+            #continents {
+                width: 30%;
+                height: 40px;
+                margin: 5% 35%;
+                font-size: 20px;
+                border-radius: 5px;
+            }
+            #button_div{
+                width: 20%;
+                height: 50px;
+                margin: 2% 40%;
+                background-color: purple;
+                color: white;
+                border-radius: 5px;
+                border: 2px solid white;
+                font-size: 20px;
+                text-align: center ;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            #text {
+                font-size: 30px;
+                color: purple;
+                text-align: center;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                margin-top: 10%;
+            }
+ 
+
+        </style>
+    </head>
+    <body>
+        <div id="parent">
+            <div id="head_div">Country Continent Finder</div>
+            <div>
+                <select id="continents">
+                    <option value="">Select Country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="China">China</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Australia">Australia</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Sweden">Sweden</option>
+                </select>
+            </div>
+            <div><button onclick="showContinent()" id="button_div">Enter</button></div>
+            <div id="text"></div>
+        </div>
+    </body>
+</html>
+
+<script type="text/javascript">
+        
+            function showContinent(){
+                var country = document.getElementById("continents").value;
+                var div = document.getElementById("text");
+                div.innerHTML = null;
+
+                switch(country){
+                    case 'India' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent= country + " is a part of Asia";
+                            div.appendChild(h1);
+                            break;
+                    
+                    case 'USA' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of North America";
+                            div.appendChild(h1);
+                            break;
+                    
+                    case 'China' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of Asia";
+                            div.appendChild(h1);
+                            break;
+
+                    case 'Nepal' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of Asia";
+                            div.appendChild(h1);
+                            break;
+
+                    case 'Australia' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is not a politically designated region.It is a part of Oceania";
+                            div.appendChild(h1);
+                            break;
+
+                    case 'France' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of Europe";
+                            div.appendChild(h1);
+                            break;
+
+                    case 'Germany' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of Europe";
+                            div.appendChild(h1);
+                            break;
+
+                    case 'South Africa' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of Africa";
+                            div.appendChild(h1);
+                            break;
+
+                    case 'Nigeria' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of Africa";
+                            div.appendChild(h1);
+                            break;
+
+                    case 'Mexico' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of North America";
+                            div.appendChild(h1);
+                            break;
+
+                    case 'Argentina' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of South America";
+                            div.appendChild(h1);
+                            break;
+
+                     case 'Brazil' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of South America";
+                            div.appendChild(h1);
+                            break;
+
+                     case 'Canada' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of North America";
+                            div.appendChild(h1);
+                            break;
+
+                     case 'Singapore' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of Asia";
+                            div.appendChild(h1);
+                            break;
+
+                     case 'Sweden' :
+                            var h1 = document.createElement("h1");
+                            h1.textContent=country + " is a part of Europe";
+                            div.appendChild(h1);
+                            break;
+
+                     default :
+                            var h1 = document.createElement("h1");
+                            h1.textContent="Please Select One of the Option";
+                            div.appendChild(h1);
+                            
+                }
+
+
+            }
+</script>

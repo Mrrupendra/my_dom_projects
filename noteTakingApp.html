@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Note Taking App</title>
+    </head>
+    <body>
+        <h1>Note Taking App</h1>
+
+        <select id="day">
+            <option value="Day1">Day1</option>
+            <option value="Day2">Day2</option>
+            <option value="Day3">Day3</option>
+            <option value="Day4">Day4</option>
+
+        </select>
+
+        <input type="text" onkeypress="noteTaking(event)" placeholder="Type Your Note" id="note">
+        <button onclick="noteTaking()">To Show All</button>
+        <div id="mssg"></div>
+        
+    </body>
+</html>
+<script>
+    //Take input from user - node,string
+    //Select the day . Day 1 ""
+    var notes = {
+        day1 : [],
+        day2 : [],
+        day3 : [],
+        day4 : []
+    };
+
+
+    function noteTaking(e){
+       if(e.key === "Enter"){
+           
+         var note_data = document.getElementById("note").value;
+         var day_data = document.getElementById("day").value;
+
+         if(day_data == "Day1"){
+         notes.day1.push(note_data);
+         }
+         else if(day_data == "Day2"){
+         notes.day2.push(note_data);
+         }
+         else if(day_data == "Day3"){
+         notes.day3.push(note_data);
+         }
+         else if(day_data == "Day4"){
+         notes.day4.push(note_data);
+         }
+        }
+        var div = document.getElementById("mssg");
+        for (const key in notes) {
+            var h1 = document.createElement("h1");
+            h1.textContent=notes[key];
+            div.appendChild(h1);
+                
+            
+        }
+
+    }
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document_Object_Model</title>
+    </head>
+    <body>
+        <h1>Prison Sequrity System </h1>
+
+        <button onclick="showAlert('main door breach!!!')">Main Door Breach</button>
+        <button onclick="showAlert('go to the main door!!!')">click</button>
+        <button onclick="showAlert('run run run!!!')">run</button>
+        <button onclick="showAlert('connection lost!!!')">Network</button>
+
+        <input type="text" placeholder="Enter Text you want" id="cust_msg">
+        <button onclick="shwoCustom()">show msg</button>
+        <div id="mssg"></div>
+
+    </body>
+</html>
+
+<script>
+    function showAlert(msg){
+        alert(msg);
+
+    }
+    function shwoCustom() {
+        var msg = document.getElementById("cust_msg").value;
+        var div = document.getElementById("mssg");
+        div.innerHTML = "";
+
+        var h1 = document.createElement("h1");
+        h1.textContent=msg;
+        div.appendChild(h1);
+    }
+
+</script>
